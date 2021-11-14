@@ -1,0 +1,26 @@
+@startuml
+Logout<|-Homescreen
+
+Homescreen<|-save
+
+save<|-listdeleted
+listdeleted<|- Deletelist
+Deletelist <|- Homescreen
+
+save<|- updateelements
+updateelements<|- Editlist
+Editlist <|- Homescreen
+
+save<|- addelement
+addelement<|- adddescription
+adddescription<|- addtitle
+addtitle<|- Addlist
+Addlist <|- Homescreen
+
+Homescreen<|--signup
+signup<|--Signup
+Signup<|-- Application
+
+Homescreen <|-- Login
+Login <|-- Application
+@enduml
